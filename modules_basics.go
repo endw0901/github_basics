@@ -67,7 +67,7 @@ git commit -m "xxxxxxxxxxxxxxx"
 
 git tag -a v1.0.1 -m "xxxxxxxxxxxx"
 
-git push -u -f origin master
+git push origin master --tags
 
 */
 
