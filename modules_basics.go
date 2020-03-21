@@ -71,6 +71,11 @@ git push origin master --tags
 
 myapp1のgo.modをvimでv1.0.0 -> v1.0.1に修正
 => go buildでダウンロード
+
+=> lsでmyapps1.exeが生成されているのが分かる
+
+▼Patch後の実行ファイルを実行
+./myapp1.exe
 */
 
 func main() {
