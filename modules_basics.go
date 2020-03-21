@@ -76,6 +76,11 @@ myapp1のgo.modをvimでv1.0.0 -> v1.0.1に修正
 
 ▼Patch後の実行ファイルを実行
 ./myapp1.exe
+
+▼Patch前のverに戻す
+vim go.modでv1.0.0に修正
+
+go get -u github.com/endw0901/go_math@v1.0.1
 */
 
 func main() {
