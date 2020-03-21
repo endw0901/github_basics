@@ -60,34 +60,8 @@ git push origin master --tags
 
 => github上にreleaseが追加される
 
-(12)myapp1のディレクトリ作成=>go.mod作成
-1個上に戻る
-cd ..
-mkdir myapp1
- => main.goを作成
-
-cd ./myapp1
-ls
- => main.goが表示される
-
-go mod init myapp1
-cat go mod
-
-(13)myapp1をrun => go.modの内容が変更されることを確認
-go run main.go
-
-$ cat go.mod
-module myapp1
-
-go 1.14
-
-require github.com/endw0901/go_math v1.0.0
-
-※go run コマンドは、go getコマンドを裏で実行し、imported packagesをダウンロードする
 */
 
 func main() {
-	// 1.githubに格納したpackageをimportしてcallする
-	go_template.Salut()
-	go_template.SayHello()
+
 }
