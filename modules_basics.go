@@ -69,6 +69,8 @@ git tag -a v1.0.1 -m "xxxxxxxxxxxx"
 
 git push origin master --tags
 
+myapp1のgo.modをvimでv1.0.0 -> v1.0.1に修正
+=> go buildでダウンロード
 */
 
 func main() {
