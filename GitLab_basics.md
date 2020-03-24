@@ -1,10 +1,10 @@
 # GitLab
 
-1.統合的コード管理(GitHub)、GitLab Flow
-2.課題とリリース追跡(Issue Board)
-3.コード品質向上(GitLab CI/CD)
-4.デプロイ管理
-5.モニタリング
+* 統合的コード管理(GitHub)、GitLab Flow
+* 課題とリリース追跡(Issue Board)
+* コード品質向上(GitLab CI/CD)
+* デプロイ管理
+* モニタリング
 
 ## 無償プロダクト
 * GitLab CE
