@@ -26,3 +26,7 @@ git log -- <file name>
 git show <commit-id>
 
 ```
+
+## おすすめ(alias登録)
+- https://github.com/endw0901/github_basics/blob/master/alias.md
+- git log --oneline --graph --decorateを上記でgit histにalias登録しておく
