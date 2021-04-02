@@ -9,7 +9,7 @@ git log --all --graph --decorate --oneline
 
 ```
 git hist
-git config --global alias.hist "log --all --graph --decorate --oneline!
+git config --global alias.hist "log --all --graph --decorate --oneline"
 
 // aliasで実行
 git hist
