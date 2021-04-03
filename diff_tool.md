@@ -15,3 +15,34 @@ git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe
 git config --global difftool.prompt false
 git config --global --list
 ```
+
+## diff：差分比較
+
+Working directory =(add)=> Staging area =(commit)=> Git repository =(push)=> Remote
+
+```
+// staging ⇔ working
+git diff
+
+// staging ⇔ working＜P4mergeを使う＞
+git difftool
+
+
+// Git Repository(last commit) ⇔ working
+git diff HEAD
+
+// Git Repository(last commit) ⇔ working＜P4mergeを使う＞
+git difftool HEAD
+
+
+// Git Repository(last commit) ⇔ staging
+git diff --staged HEAD
+
+// Git Repository(last commit) ⇔ staging＜P4mergeを使う＞
+git difftool --staged HEAD
+
+
+// ファイル名指定でdiff
+git diff -- <file name>
+qで抜ける
+```
