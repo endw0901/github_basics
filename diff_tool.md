@@ -18,7 +18,7 @@ git config --global --list
 
 ## diff：差分比較
 
-Working directory =(add)=> Staging area =(commit)=> Git repository =(push)=> Remote
+Working directory =(add)=> Staging area =(commit)=> Local Git repository =(push)=> Remote
 
 ```
 // staging ⇔ working
@@ -28,23 +28,26 @@ git diff
 git difftool
 
 
-// Git Repository(last commit) ⇔ working
+// Local Git Repository(last commit) ⇔ working
 git diff HEAD
 
-// Git Repository(last commit) ⇔ working＜P4mergeを使う＞
+// Local Git Repository(last commit) ⇔ working＜P4mergeを使う＞
 git difftool HEAD
 
 
-// Git Repository(last commit) ⇔ staging
+// Local Git Repository(last commit) ⇔ staging
 git diff --staged HEAD
 
-// Git Repository(last commit) ⇔ staging＜P4mergeを使う＞
+// Local Git Repository(last commit) ⇔ staging＜P4mergeを使う＞
 git difftool --staged HEAD
 
 
-// ファイル名指定でdiff
-git diff -- <file name>
-qで抜ける
+// Local Git Repository(last commit ) ⇔ Remote Git Repository
+// masterがlocal、origin/masterがremote
+
+git diff master origin/master
+git difftool master origin/master
+
 ```
 
 ### commit指定diff
@@ -62,4 +65,9 @@ git difftool HEAD HEAD^
 git diff aaaaa  bbbbbb
 git difftool aaaaa bbbbb
 ctrl + qで次のファイルdiffがみれる
+
+
+// ファイル名指定でdiff
+git diff -- <file name>
+qで抜ける
 ```
