@@ -46,3 +46,20 @@ git difftool --staged HEAD
 git diff -- <file name>
 qで抜ける
 ```
+
+### commit指定diff
+
+```
+// 指定commit ⇔ last commit
+git diff <commit-id> HEAD
+
+// last commit ⇔ 1つ前のcommit
+git diff HEAD HEAD^
+git difftool HEAD HEAD^
+
+
+// 指定commit(aaaa) ⇔ 指定commit(bbbb)
+git diff aaaaa  bbbbbb
+git difftool aaaaa bbbbb
+ctrl + qで次のファイルdiffがみれる
+```
