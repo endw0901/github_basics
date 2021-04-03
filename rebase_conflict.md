@@ -17,3 +17,16 @@ git rebase master
 git hist
 
 ```
+
+## conflict
+
+```
+// rebase取り消しする場合
+git rebase --abort
+
+// rebase conflict解決 => save
+git mergetool
+git add xxxxx
+git rebase --continue
+
+```
