@@ -1,5 +1,8 @@
 # diff
 
+- ファイル名だけname onlyで比較
+https://www.sejuku.net/blog/70946
+
 ## tools
 
 - P4 merge (P4 mergeのみ)
