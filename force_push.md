@@ -16,21 +16,25 @@ cherry-pickは、そもそものpick漏れが起きそうで、指定して戻�
 git push --force-with-lease --force-if-includes branch名
 
 ```
-あるいは、 --force-with-lease[=<refname>]とともに補助的なオプションとして --force-if-includesを指定すると(つまり、リモート側のrefが正確にどのコミットを指していなければならないか、あるいはリモート側のどのrefが保護されているかを言わずに)「プッシュ」時に、バックグラウンドで暗黙的に更新されていたかもしれないリモート追跡refからの更新がローカルで統合されているかどうかを検証してから強制更新が可能になります。
+あるいは、 --force-with-lease[=<refname>]とともに補助的なオプションとして --force-if-includesを指定すると<br>
+(つまり、リモート側のrefが正確にどのコミットを指していなければならないか、<br>
+あるいはリモート側のどのrefが保護されているかを言わずに)「プッシュ」時に、<br>
+バックグラウンドで暗黙的に更新されていたかもしれないリモート追跡refからの更新が<br>
+ローカルで統合されているかどうかを検証してから強制更新が可能になります。
 ```
 
-▼force pushで他の人のコミットを吹き飛ばすケース
-pullを忘れている
-pullしてからforce pushまでにコミットが入った
-=> --force-with-lease で防ぐ
+▼force pushで他の人のコミットを吹き飛ばすケース<br>
+pullを忘れている<br>
+pullしてからforce pushまでにコミットが入った<br>
+=> --force-with-lease で防ぐ<br>
 
-▼--force-with-lease で他の人のコミットを吹き飛ばすケース
-pullを忘れている
-pullしてからforce pushまでにコミットが入った
-かつfetchしてから --force-with-lease付きでforce pushした場合
-※ローカルのリポジトリが知っているリモートブランチは git fetch で origin と同期される
-=> 他の人のコミットを吹き飛ばす
-remotes/origin/xxxx  (ローカルのリポジトリが知っているリモートブランチ)
-origin/xxx (リモートブランチ)
-  
+▼--force-with-lease で他の人のコミットを吹き飛ばすケース<br>
+pullを忘れている<br>
+pullしてからforce pushまでにコミットが入った<br>
+かつfetchしてから --force-with-lease付きでforce pushした場合<br>
+※ローカルのリポジトリが知っているリモートブランチは git fetch で origin と同期される<br>
+=> 他の人のコミットを吹き飛ばす<br>
+remotes/origin/xxxx  (ローカルのリポジトリが知っているリモートブランチ)<br>
+origin/xxx (リモートブランチ)<br>
+  <br>
 => git push --force-with-lease --force-if-includes branch名 で防げる
