@@ -37,4 +37,23 @@ pullしてからforce pushまでにコミットが入った<br>
 remotes/origin/xxxx  (ローカルのリポジトリが知っているリモートブランチ)<br>
 origin/xxx (リモートブランチ)<br>
   <br>
-=> git push --force-with-lease --force-if-includes branch名 で防げる
+=> `git push --force-with-lease --force-if-includes branch名` で防げる
+
+
+### 例 コミット吹き飛ばした
+
+```
+main
+A -> B
+rc/202301ブランチ
+A -> B -> C -> D
+↓
+A -> B -> C -> D -> D2
+rc/202302ブランチ
+ローカル
+A -> B -> C -> D -> E -> F ->
+これにD2追加してforce pushした
+リモート
+A -> B -> C -> D -> E -> F -> F2
+※F2が消失
+```
